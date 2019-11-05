@@ -1,0 +1,49 @@
+.side-menu{
+	font-weight: bold;
+	li {
+		padding-right: 25px;
+		margin-bottom: 1px;
+
+		a {
+			display: block;
+			padding: 13px 15px;
+			position: relative;
+			border-radius: 6px 0 0 6px;
+			overflow: visible;
+
+			&:hover, &:focus {
+				text-decoration: none;
+			}
+
+      svg {
+        position: absolute;
+        width: 25px;
+        height: 100%;
+        right: -24px;
+        top: 0;
+      }
+		}	
+	}
+}
+.custom-select{
+  background: #fff !important;
+}
+
+@media (max-width: 575.98px){
+	.dropdown{
+		background: #e2e2e2;
+		a{
+			padding: 10px;
+			width: 100%;
+			display: block;
+			padding: 10px;
+		}
+	}
+	.dropdown-menu{
+		width: 100%;
+		border-radius: 0px;
+	}
+	.dropdown-toggle:after{
+		display: none;
+	}
+}

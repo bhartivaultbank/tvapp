@@ -1,0 +1,187 @@
+$light-primary:#0E63BA;
+$white:#fff;
+$black:#000;
+
+$grey-0:#fafafa;
+$grey-1:#f0f0f0;
+$grey-2:#e2e2e2;
+$grey-3:#777;
+$grey-4:#333;
+$grey-5:#f7f7f7;
+$grey-6:#ccc;
+$grey-7:#666;
+$grey-8:#999;
+
+$dark-1:#656D7F;
+$dark-2:#171d2e;
+$dark-3:#081022;
+$dark-4:#2e384c;
+$dark-5:#3a4151;
+$dark-6:#3d4a64;
+$dark-7:#4c566b;
+$dark-8:#90a1b6;
+$dark-9:#989CA3;
+$dark-10:#272f40;
+$dark-11:#767a84;
+
+$menu-bg:#272f40;
+$link-active:#0ff;
+$primary: #0E63BA;
+$cotainer-bg-light:#fff;
+$cotainer-bg-dark:#272f40;
+
+$themes: (
+  light: (
+    col-green:#70A800,
+    col-red:#D94040,
+    cotainer-bg:#fff,
+    banner-color:$white,
+    payment-history-border:'',
+    login-sides-logo:#1280ed,
+
+    background: $grey-1,
+    color:$grey-4,
+    text-muted:'',
+    card-bg:$grey-6,
+    chart-loading:$white,
+    pop-head:$grey-5,
+    anchor:$grey-4,
+    white-black:$white,
+    black-white:$black,
+    top-bar:$grey-2,
+    dropdown-menu:$white,
+    main-menu-bg:$white,
+    nav-link:$grey-3,
+    nav-link-color:$light-primary,
+    nav-link-hover: rgba(0,0,0,.25),
+    top-bar-hover: rgba(0,0,0,.15),
+    stocks-bg:'',
+    stocks-color:'',
+    verticle-line:$light-primary,
+    steps:$grey-1,
+    home-news:$grey-4,
+    home-news-h6:'',
+    market-bg:$white,
+    market-table-th:$grey-2,
+    market-tr-even:$grey-0,
+    news-b-shadow:0px 0px 10px $grey-2,
+    news-head-bg:$white,
+    news-head-border:$grey-2,
+    news-head-input:$white,
+    dropdown-item:$grey-1,
+    dropdown-item-color:$black,
+    news:$grey-3,
+    svg-path:$light-primary,
+    ticker-shadow:0px 0px 10px $grey-2,
+    client-list:$grey-1,
+    chart-filter-bar:$grey-5,
+    nav-item:$grey-2,
+    select-time-color:$white,
+    select:$grey-4,
+    chart-menu-dropdown:$grey-6,
+    price-title-color:$grey-4,
+    price-title-bb:0,
+    price-table-two:$grey-5,
+    price-table-two-hover:$grey-6,
+    table-child-odd:$white,
+    history-sec-one:$grey-6,
+    list-images:$grey-6,
+    middle:$black,
+    login:$light-primary,
+    loginform-a:$grey-3,
+    heading:$grey-5,
+    payment-bg-bs:$grey-2,
+    nav-item-bg:$grey-1,
+    nav-item-color:$grey-3,
+    side-menu-li:$grey-3,
+    side-menu-active:$white,
+    heading-bg:$grey-1,
+    explorer:$grey-3,
+    show-hover:darken($white, 10%),
+    page-header:$grey-1,
+    nav-tabs-bg:'',
+    nav-tabs-border:'',
+    border-bottom-dotted:$grey-2,
+    btn-outline-primary:'',
+    flash-red:rgba(217,64,64, 0.19),
+    flash-green:rgba(112,168,0, 0.19),
+  ),
+
+  dark: (
+    col-green:#00b56e,
+    col-red:#e55541,
+    cotainer-bg:#272f40,
+    login-sides-logo:#50586a,
+    payment-history-border:#4c566b,
+    banner-color:#e2e2e2,
+
+    background: $dark-2,
+    color:$grey-1,
+    text-muted:$dark-9,
+    card-bg:$grey-6,
+    chart-loading:#2d3442,
+    pop-head:$dark-5,
+    anchor:$grey-1,
+    white-black:$black,
+    black-white:$white,
+    top-bar:$dark-5,
+    dropdown-menu:$dark-4,
+    main-menu-bg:$dark-10,
+    nav-link:$grey-1,
+    nav-link-color:$link-active,
+    nav-link-hover: rgba(255, 255, 255, 0.25),
+    top-bar-hover: rgba(255,255,255,.15),
+    stocks-bg:$dark-10,
+    stocks-color:$white,
+    verticle-line:$grey-1,
+    steps:$light-primary,
+    home-news: $dark-11,
+    home-news-h6:$grey-1,
+    market-bg:$dark-2,
+    market-table-th:$dark-5,
+    market-tr-even:$cotainer-bg-dark,
+    news-b-shadow:none,
+    news-head-bg:$cotainer-bg-dark,
+    news-head-border:$dark-2,
+    news-head-input:$grey-2,
+    dropdown-item:$grey-6,
+    dropdown-item-color: $grey-4,
+    news:$grey-6,
+    svg-path:$white,
+    ticker-shadow: 0px 0px 10px transparent,
+    client-list: $cotainer-bg-dark,
+    chart-filter-bar: $dark-4,
+    nav-item: $dark-5,
+    select-time-color: $grey-1,
+    select:$dark-8,
+    chart-menu-dropdown:$dark-6,
+    price-title-color:$grey-6,
+    price-title-bb:$dark-2,
+    price-table-two:$dark-10,
+    price-table-two-hover:$dark-3,
+    table-child-odd:$dark-2,
+    history-sec-one:$dark-2,
+    list-images:$grey-3,
+    middle:$dark-1,
+    login:$dark-5,
+    loginform-a:$white,
+    heading:$dark-5,
+    payment-bg-bs:transparent,
+    nav-item-bg:darken($dark-5, 10%),
+    nav-item-color:darken($grey-1, 10%),
+    side-menu-li:$grey-2,
+    side-menu-active:$grey-4,
+    heading-bg:$dark-5,
+    explorer:$white,
+    show-hover:lighten($cotainer-bg-dark, 10%),
+    page-header:#4c566b,
+    nav-tabs-bg: $dark-3,
+    nav-tabs-border:$black $black $black,
+    border-bottom-dotted:$dark-7,
+    btn-outline-primary:$primary,
+    flash-red:rgba(229,85,65, 0.19),
+    flash-green:rgba(0,181,110, 0.19),
+  ),
+
+);
+

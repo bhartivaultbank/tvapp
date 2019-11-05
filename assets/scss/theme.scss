@@ -1,0 +1,936 @@
+
+body {
+  margin: 0px;
+  font-family: 'Calibri', 'Arial', 'sans-serif';
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizelegibility;
+  background: $white;
+  overflow: auto;
+  color: $grey-4;
+}
+
+.btn.btn-primary {
+	background-color: $light-primary;
+
+	&, &:hover, &:focus, &:active {
+		color: $white;
+		border: none;
+		box-shadow: none;
+	}
+
+	&:hover, &:focus {
+		background-color: darken($light-primary, 10%);
+	}
+
+	&:active:focus {
+		background-color: darken($light-primary, 15%);
+	}
+}
+.arrow-blue {
+  stroke: $light-primary
+}
+
+.btn.btn-outline-primary {
+	border: 1px solid $light-primary;
+  color: $light-primary;
+	&:hover, &:focus, {
+		color: $white;
+		background-color: $light-primary;
+	}
+}
+
+div.qrcode img {
+  background-color: $white;
+}
+
+.btn-reset{
+  border: solid 1px $grey-2;
+}
+
+.select-currency {
+  color: #495057;
+  background-color: #eceeef;
+  border: 1px solid #ced4da;
+}
+
+.btn-primary {
+  background: $light-primary;
+}
+.badge-warning {
+  color: $white;
+}
+.marquee-container {
+  background: $light-primary; 
+  color: $white; 
+  border-bottom: solid 1px $light-primary;
+}
+.chart-bg{
+  background: $white;
+  color: $grey-4;
+}
+div.why-us{
+  svg{
+    fill: $light-primary;
+    .b{
+      stroke:$light-primary;
+    }
+  }
+}
+hr{
+  border-color: $grey-2;
+}
+footer{
+  color:$dark-9;
+  small{
+    color: $grey-6
+  }
+  li:first-child, b{
+    color:$grey-1;
+  }
+  .subscribe-input{
+    border: solid 1px $dark-9;
+    background: transparent;
+    color: $grey-1;
+  }
+  input.subscribe-input::placeholder {
+    color:$dark-9;
+  }
+  .subscribe-button{
+      background: $white;
+  }
+}
+
+.btn-outline-secondary {
+  border-color: $grey-6;
+}
+.card-friends {
+  background-color: $grey-1;
+  border-color: $grey-6;
+}
+.social-icons svg:hover {
+  fill: $white;
+}
+.features-icons {
+  fill: $light-primary;
+  background: $white;
+}
+.ic-email, .ic-phone {
+  fill: $grey-7;
+}
+footer .ic-logo {
+  fill: $white;
+}
+
+.btn-black {
+  color: $white;
+  background-color: $black;
+}
+
+.btn-black,
+.btn-black-hover {
+  &:hover {
+    color: $white;
+    box-shadow: 0 0 0 2px $white;
+  }
+}
+.ic-navbar-toggler {
+  &:before, &:after {
+    background-color: $grey-8;
+  }
+}
+.navbar-toggler.collapsed {
+  .ic-navbar-toggler {
+    background-color: $grey-8;
+  }
+}
+.fill-white {
+  fill: $white
+}
+.info-link {
+  fill: $white;
+  background-color: $light-primary;
+}
+
+.dark .arrow-blue {
+  stroke: $white;
+}
+
+.dark .btn-outline-primary {
+  border-color: $grey-6;
+  color: $grey-6;
+  &:hover {
+    color: $white;
+    border-color:$primary;
+  }
+}
+
+
+
+
+//
+@include themify($themes) {
+
+  // added by bharti
+  .table {
+    color: themed('color');
+  }
+  // bharti changes ends here
+  background: themed('background');
+  color:themed('color');
+
+  .required:after { 
+    content:" *"; 
+    color: themed('black-white');
+  }
+
+  .percent-count a {
+    color:$grey-8; 
+    border:$grey-8;
+    &:hover, &.active {
+      border-color: themed('col-red');
+      color: themed('col-red');
+    };
+  }
+
+  .card.bg-light { 
+    background: themed('stocks-bg') !important; 
+  }
+
+  .dropdown-item{
+    color:themed('black-white');
+  }
+
+  app-header{
+    background: themed('white-black');
+    box-shadow: themed('ticker-shadow');
+    .dropdown-item{
+      color:themed('black-white');
+      background: themed('white-black');
+      &:hover, &.active {
+        background: $primary;
+        color: $white;
+        font-weight: 600;
+      };
+    }
+  }
+
+  .price_green{ 
+    color:themed('col-green');
+  }
+  .price_orange { 
+    color:themed('col-red');
+  }
+  .overflow_color_orange{
+    background-color:themed('col-red');
+  }
+  .overflow_color_green{
+    background-color:themed('col-green');
+    opacity: 0.15;
+  }
+  .text-success { 
+    color:themed('col-green');
+  }
+  .text-danger { 
+    color:themed('col-red');
+  }
+
+  .badge-danger {
+    background-color:themed('col-red');
+  }
+  .badge-success {
+    color: $white;
+    border-color: themed('col-green');
+    background-color:themed('col-green');
+  }
+
+  .btn-success {
+    color: $white;
+    background-color: themed('col-green');
+    border-color: themed('col-green');
+
+    &:hover, &:focus {
+      background-color: darken(themed('col-green'), 10%);
+      border-color: darken(themed('col-green'), 10%);
+    }
+
+    &:active:focus {
+      background-color: darken(themed('col-green'), 20%);
+      border-color: darken(themed('col-green'), 20%);
+    }
+  }
+
+  .text-muted { 
+    color:themed('text-muted') !important;
+  }
+
+  .card { 
+    border-color:themed('card-bg') !important;
+  }
+
+  .chart-loading {
+    background-color:themed('chart-loading') !important;
+  }
+
+  .form-modal {
+    background-color: themed('cotainer-bg');
+    .nav-steps {
+      .nav-item {
+        &.active {
+          color: themed('nav-link-color');
+          border-color: themed('nav-link-color');
+        }
+        a:hover {
+          color: themed('nav-link-color');
+        }
+      }
+    }
+  }
+
+  .pop-up-bg {
+    .pop-up{
+      background: themed('cotainer-bg');
+      .pop-head{
+        background: themed('pop-head');
+        .close{
+          color: themed('anchor');
+          a{
+            color: themed('anchor') !important;
+          }
+        }
+      }
+    }
+  }
+
+  div.top-bar{
+    border-bottom-color: themed('top-bar');
+    a {
+      color:themed('anchor'),
+    }
+    a:hover{
+      color:themed('anchor');
+    }
+    .dropdown-menu{
+      background: themed('dropdown-menu');
+      color:themed('anchor');
+      a{
+        color:themed('anchor');
+      }
+    }
+  }
+
+  div.main-menu-bg {
+    background: themed('main-menu-bg');
+  }
+
+  .navbar-nav .nav-link{
+    color: themed('nav-link');
+    text-shadow: none;
+
+    &:hover, &:focus {
+      border-color:  themed('nav-link-hover');
+    }
+
+    &.active{
+      color: themed('nav-link-color');
+      border-color: themed('nav-link-color');
+
+      @media (max-width: 992px) {
+        color: themed('white-black');
+        text-shadow: none;
+        background-color: themed('nav-link-color');
+      }
+    }
+  }
+
+  .top-bar {
+    .navbar-nav .nav-link{
+      &:hover, &:focus {
+        background-color: themed('top-bar-hover');
+      }
+    }
+  }
+
+  .navbar-brand {
+    fill: themed('white-black');
+  }
+
+  .stocks{
+    background: themed('stocks-bg');
+    color: themed('stocks-color');
+  }
+
+  .fullscreen{
+    background: themed('background');
+  }
+
+  div.three-steps{
+    h4{
+      color: themed('color');
+    }
+    ul {
+      h6, p {
+          color: themed('color');
+      }
+    }
+    .verticle-line{
+      border-left-color: themed('verticle-line');
+    }
+    .steps{
+      border-color: themed('verticle-line');
+      background: themed('steps');
+      color: themed('verticle-line');
+    }
+  }
+
+  .home-news{
+    background: themed('main-menu-bg');
+    color: themed('home-news');
+    h6{
+      color: themed('home-news-h6');
+    }
+  }
+
+  .up-arrow {
+    fill:themed('col-green');
+    color: themed('col-green');
+  }
+  .down-arrow {
+    fill:themed('col-red');
+    color: themed('col-red');
+  }
+
+  .market{
+    background: themed('market-bg');
+    box-shadow: none;
+    .table td, .table th, .table thead th {
+      border-top-color: themed('background');
+    }
+    .table thead th{
+      background: themed('market-table-th');
+      border-bottom-color: themed('background');
+    }
+    tbody tr td{
+      &.flash-red{
+        background-color: themed('flash-red');
+      }
+      &.flash-green{
+        background-color:themed('flash-green');
+      }
+    }
+    tr:nth-child(even){
+      background: themed('market-tr-even');
+    }
+    tbody td{
+      button{
+        color:$white
+      }
+      button.btn-app-green{
+        background: themed('col-green');
+      }
+      button.btn-app-red {
+          background:themed('col-red');
+      }
+    }
+  }
+
+  .newsfeed {
+    box-shadow: themed('news-b-shadow');
+    .news-head {
+      background-color: themed('news-head-bg');
+      border-bottom-color: themed('news-head-border');
+      input[type="text"], input[type="password"]{
+        background: themed('news-head-input');
+        color:$grey-4;
+      }
+    }
+    .dropdown {
+      background: themed('news-head-input');
+      border-color: themed('news-head-border');
+      color: $grey-4;
+    }
+
+    .dropdown-menu {
+      background-color: themed('news-head-input');
+      color:$grey-4;
+      border-color: themed('news-head-border');
+    }
+
+    .dropdown-item:hover {
+      background: themed('dropdown-item');
+      color: themed('dropdown-item-color');
+    }
+    .news {
+      color: themed('news');
+      background: themed('cotainer-bg');
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: themed('background');
+      img{
+        border-color: themed('background');
+      }
+      svg {
+        path{
+        fill: themed('svg-path');
+        }
+      }
+      a {
+        color: themed('anchor');
+      }
+    }
+  }
+
+  app-exchange-master,app-trades-master {
+    div.ticker , .ticker-main{
+      background: themed('news-head-bg');
+      box-shadow: themed('ticker-shadow');
+    }
+    
+    .client_list {
+      background-color: themed('client-list');
+      color: themed('anchor');
+    }
+
+    div.server-time {
+      color: themed('anchor');
+    }
+    ul.dropdown-menu{
+      background-color: themed('dropdown-menu');
+      color:themed('color');
+      .listCoins:hover{
+        background: themed('verticle-line');
+        color:themed('white-black');
+      }
+    }
+    div.ticker-info {
+      span.label {
+        color: themed('dropdown-item');
+      }
+    }
+  }
+
+  app-exchange,app-chart {
+    .chart-container{
+      background: themed('cotainer-bg');
+    }
+    div.chart-filter-bar{
+      background: themed('chart-filter-bar');
+      li.nav-item {
+        border-color: themed('chart-filter-bar');
+        background: themed('nav-item');
+        select {
+          background: themed('nav-item');
+          color:themed('stocks-color');
+        }
+        &:hover, &.active {
+          background: $light-primary;
+          color:$white;
+          select {
+            background: $light-primary;
+            color:$white;
+          }
+        }
+        .nav-link.active {
+          background: $light-primary;
+        }
+        
+      }
+    }
+    div.filter-bar{
+      background: themed('news-head-border');
+      div.filter {
+        &.choice {
+          .select_time{
+            &.active{
+              background: $light-primary;
+              border-color: $light-primary;
+              color: themed('select-time-color') !important;
+              select {
+                background: $light-primary;
+                border-color: $light-primary;
+                color: themed('select-time-color') !important;
+              }
+            }
+            select {
+              color:themed('select');
+            }
+          }
+          a.choice {
+            &.active {
+              color: themed('select-time-color') !important;
+            }
+          }
+        }
+      }
+      div.filter.choice{
+        a.choice{
+          color: themed('select');
+        }
+        a.choice.active { 
+          background-color: $light-primary;
+        }
+      }
+    }
+    .chart_menu_dropdown{
+      button{
+        background-color:themed('chart-menu-dropdown'); 
+        color:themed('anchor'); 
+      }
+    }
+  }
+
+  app-exchange-history {
+    .history-container {
+      background: themed('cotainer-bg');
+    }
+    table.price_title { 
+      tr { 
+        color:themed('price-title-color');
+        background:themed('top-bar');
+      }
+    }
+    table.price_table_one {
+      tr { 
+        color:themed('price-title-color');
+        background: themed('top-bar');
+      }
+    }
+    .exchange_total_blink { 
+      background-color: themed('chart-filter-bar');
+    }
+    table.price_table {
+      tr {
+        color: themed('price-title-color');
+        background-color: themed('price-table-two');
+      }
+      tr:nth-child(odd) {
+        background-color: themed('table-child-odd');
+      }
+    }
+
+    .history-section.history_sec_one {  
+      border-right-color: themed('history-sec-one');
+    }
+
+    table.price_tab_check {
+      tr{
+        border-bottom-color: themed('background');
+      }
+    }
+
+    .list_images {
+      li {
+        border-color:themed('list-images');
+      }
+      li.active {
+        border-color:themed('col-red');
+      }
+    }
+    
+  }
+  
+  app-exchange-orders,app-trade-orders{
+    .exchange-orders{
+      background: themed('cotainer-bg');
+      box-shadow: themed('ticker-shadow');
+    }
+    .charts_section{
+      background: themed('chart-filter-bar');
+      color:themed('stocks-color');
+      .nav-item { 
+        background-color: themed('nav-item');
+        border-color: themed('chart-filter-bar');
+        color: themed('stocks-color');
+        &.active{
+          background-color: $light-primary;
+          color: $white;
+          span {
+            color: $white;
+          }
+        }
+      }
+    }
+    .order_section .chart_btn{
+      background-color:themed('col-red');
+      color:$white;
+    }
+    table.data_table {
+      tr {
+        color:themed('nav-link');
+        background-color: themed('price-table-two');
+      }
+      tr:nth-child(odd) {
+        background-color: themed('table-child-odd');
+      }
+      tr:first-child { 
+        background-color: themed('market-table-th');
+        color:themed('price-title-color');
+      }
+    }
+  }
+
+  app-exchange-trade, app-trades{
+    div.trades {
+      background: themed('cotainer-bg');
+    }
+    div.buy-and-sell {
+      div.buy.basc div.basc-form a.button { 
+        background: themed('col-green');
+      }
+      div.sell.basc div.basc-form a.button { 
+        background: themed('col-red');
+      }
+    }
+    div.trade-options {
+      background-color:themed('chart-filter-bar');
+      .nav-item {
+        background-color:themed('nav-item');
+        border-color: themed('chart-filter-bar');
+        &.active {
+          background: $light-primary;
+          color: themed('select-time-color');
+        }
+      }
+    }
+  }
+
+  div.login {
+    .login-left {
+      background: themed('login');
+      .login-logo{
+        fill: themed('login');
+        stroke: $white;
+      }
+      svg {
+        path {
+          fill: themed('login');
+          stroke: themed('login-sides-logo');
+        }
+      }
+    }
+    .loginform {
+        background: themed('cotainer-bg');
+    }
+    .loginform:last-child {
+      a {
+        color:themed('loginform-a');
+      }
+    }
+  }
+
+  app-wallets,app-cash {
+    .card {
+      border-color: themed('card-bg');
+      background: none;
+    }
+    .account-bg{
+      background: themed('cotainer-bg');
+      box-shadow: themed('ticker-shadow');
+      a.symbol {
+        border-top-color: themed('news-head-border');
+      }
+      .heading{
+        background:themed('heading');
+      }
+      .account-details{
+        border-bottom-color: themed('news-head-border');
+        .bank-details{
+          border-color:themed('news-head-border');
+        }
+      }
+      .transaction-history{
+        .table td{
+          border-top-color: themed('news-head-border');
+        }
+        table {
+          border-color: themed('news-head-border');
+          thead{
+            background: themed('heading');
+            th{
+              border-color: themed('news-head-border');
+            }
+          }
+        }
+        .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+          color: themed('stocks-color');
+          background-color: themed('heading');
+          border-color: themed('nav-tabs-border');
+        }
+        .nav-tabs {
+          border-color: themed('nav-tabs-border');
+        }
+      }
+    }
+  }
+
+  div.payment-bg{
+    background: themed('cotainer-bg');
+    box-shadow: themed('payment-bg-bs');
+    color: themed('nav-link');
+    .filter-select-all{
+      color:$black !important;
+    }
+  }
+
+  app-make-payment-master, app-payment-feed, app-payment-requests, app-friends, app-my-payments,app-taxes {
+    .nav-item{
+      background: themed('nav-item-bg');
+      color: themed('nav-item-color');
+      border-color: themed('news-head-border');
+      &:hover{
+        border-color: themed('news-head-border');
+      }
+    }
+    .nav-tabs .nav-link{
+      &.active{
+        background: themed('cotainer-bg');
+        color: themed('anchor');
+        border-color:themed('cotainer-bg');
+      }
+    }
+  }
+
+  .side-menu{
+    li a {
+      color: themed('side-menu-li');
+      svg {
+        fill: none;
+      }
+
+      &.active, &:hover {
+        color: themed('side-menu-active') !important;
+        background: themed('verticle-line');
+        svg {
+          fill: themed('verticle-line');
+        }
+      }
+    }
+  }
+
+  app-received-requests, app-friend-requests, app-sent-requests, app-public-payments,app-private-payments,app-incoming-requests,app-outgoing-requests,app-incoming-payments,app-outgoing-payments,app-taxes{
+    .heading{
+      background: themed('heading-bg');
+      color: themed('anchor');
+    }
+
+    .split-payment,.payment-tag{
+      background:  themed('nav-link');
+      color:themed('side-menu-active') !important;
+    }
+    .split-payment:hover, a:hover,.payment-tag:hover{
+      color:themed('side-menu-active') !important;
+    }
+
+    .payment-history{
+      border-bottom-color: themed('payment-history-border') !important;
+      b{
+        color: themed('anchor');
+      }
+      .user-img-bg{
+        background: themed('heading-bg');
+        color: themed('anchor');
+      }
+
+      a:not(.ignore) {
+        color:themed('select-time-color');
+        &.accept{
+            background: themed('col-green');
+        }
+        &.reject{
+            background: themed('col-red');
+        }
+      }
+      a:hover{
+        color:themed('select-time-color') !important;
+        text-decoration: none;
+      }
+
+      .explorer {
+        color: themed('explorer');
+      }
+      .explorer:hover {
+        color: themed('explorer') !important;
+      }
+    }
+
+    .pop-body{
+      .split-timeline{
+        background: themed('verticle-line');
+      }
+      .split-line{
+        border-right-color: themed('verticle-line');
+      }
+    }
+
+    .dropdown-menu{
+      background-color: themed('pop-head');
+    }
+    span.dropdown-item:hover {
+      color: #000;
+    }
+  }
+
+
+  .user-bg {
+    background: themed('cotainer-bg');
+    box-shadow: themed('ticker-shadow');
+  }
+
+  .show-hover:hover{
+    background: themed('show-hover');
+  }
+  .side-menu-main {
+    background-color: themed('cotainer-bg');
+  }
+
+  .page-header {
+    border-bottom-color: themed('page-header');
+  }
+  .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+    color: themed('stocks-color');
+    background-color: themed('nav-tabs-bg');
+    border-color: themed('nav-tabs-border');
+  }
+
+  .container-bg{
+    background: themed('cotainer-bg');
+    box-shadow: themed('ticker-shadow');
+  }
+
+  .border-bottom-dotted{
+    border-bottom-color: themed('border-bottom-dotted');
+  }
+  div.top-bar .three-rows-menus button.dropdown-item {
+    color: themed('anchor');
+  }
+
+  .btn-danger{
+    color: $white !important;
+    background-color: themed('col-red');
+    border-color: themed('col-red');
+    &:hover, &:focus {
+      background-color: darken(themed('col-red'), 10%);
+      border-color: darken(themed('col-red'), 10%);
+      color: $white !important;
+    }
+
+    &:active:focus {
+      background-color: darken(themed('col-red'), 20%);
+      border-color: darken(themed('col-red'), 20%);
+    }
+  }
+
+  .ic-logo.lg, .light  {
+    fill: themed('black-white');
+  }
+
+  .list-message{
+    color:$black !important;
+  }
+
+  .red {
+    fill: themed('col-red');
+  }
+  .green{
+    fill: themed('col-green');
+  }
+}
